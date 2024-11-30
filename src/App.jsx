@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import Description from "./components/Description/Description";
 import Options from "./components/Options/Options";
 import Feedback from "./components/Feedback/Feedback";
-import css from "./App.module.css";
-
+import Notification from "./components/Notification/Notification";
 const states = {
   good: 0,
   neutral: 0,
@@ -55,7 +54,7 @@ export const App = () => {
           totalPositive={countPositiveFeedback()}
         />
       ) : (
-        <p className={css.text}>No feedback yet</p>
+        <Notification message={"No feedback yet"} />
       )}
     </>
   );
